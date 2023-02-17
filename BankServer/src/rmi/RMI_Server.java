@@ -22,7 +22,7 @@ public class RMI_Server {
             var bank = new Bank();
             Registry r = java.rmi.registry.LocateRegistry.createRegistry(1242);
 
-            Naming.rebind("rmi://localhost:1242/BANK", bank);
+            Naming.rebind("rmi://192.168.23.21:1242/BANK", bank); /**192.168.23.21 is the ip address of the server**/ 
 
             System.out.println("SERVER IS REady");
         } catch (Exception e) {
